@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresiones Faciales</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            overflow-x: auto;  /* Habilitar desplazamiento horizontal */
+            overflow-y: hidden;  /* Deshabilitar desplazamiento vertical */
+            height: 100vh; /* La altura se ajusta al tamaño de la ventana */
+        }
+
+        /* Barra de navegación */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #0982B7;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 10;
+        }
+
+        /* Estilos de los enlaces de navegación */
+        .nav-link {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 50px;
+            margin: 0 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background-color: #707070;  /* Fondo oscuro cuando el enlace está activo */
+        }
+
+        /* Contenedor de navegación */
+        .nav-container {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Estilos del buscador */
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        .search-input {
+            border: none;
+            padding: 10px;
+            border-radius: 20px;
+            margin-right: 10px;
+            outline: none;
+        }
+
+        /* Contenedor principal que usa flex para el scroll horizontal */
+        .horizontal-scroll {
+            display: flex;
+            min-width: 100vw; /* Ajustado para asegurar que las secciones excedan el ancho de la ventana */
+            height: 100vh;
+            position: relative;
+            overflow-x: auto; /* Permitir el scroll horizontal */
+            scroll-snap-type: x mandatory; /* Ajuste de scroll suave entre secciones */
+            scrollbar-width: thin; /* Define el tamaño de la barra de scroll */
+            scrollbar-color: #0982B7 #f1f1f1; /* Color de la barra y el fondo */
+        }
+
+        /* Estilos del contenedor de scroll horizontal */
+        .horizontal-scroll::-webkit-scrollbar {
+            height: 10px; /* Altura de la barra de desplazamiento horizontal */
+        }
+
+        .horizontal-scroll::-webkit-scrollbar-thumb {
+            background-color: #0982B7;
+            border-radius: 5px;
+        }
+
+        .horizontal-scroll::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+        }
+
+        /* Secciones del contenido */
+        section {
+            min-width: 100vw;  /* Asegura que cada sección tenga el ancho de la ventana */
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+            position: relative;
+            padding: 40px;
+            box-sizing: border-box;
+            scroll-snap-align: start; /* Alinear la sección al inicio del scroll */
+        }
+
+        /* Colores de fondo de las secciones */
+        #expresiones-faciales { 
+            background-color: #333; /* Color oscuro */
+            color: white; 
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Justificar a la izquierda */
+            justify-content: center;
+            padding: 40px;
+            width: 100%; /* Asegurarse de que ocupe todo el ancho */
+        }
+
+        /* Título de Expresiones Faciales */
+        #expresiones-faciales h2 {
+            font-size: 32px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        /* Estilos de los enlaces dentro de Expresiones Faciales */
+        .category-link {
+            display: block;  /* Para que ocupe todo el ancho disponible */
+            background-color: #0982B7;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 20px;
+            margin: 10px 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .category-link:hover {
+            background-color: #707070;
+        }
+
+        /* Añadir estilo al texto debajo de los enlaces */
+        .category-description {
+            font-size: 16px;
+            color: white;
+            margin-top: 10px;
+            max-width: 70%; /* Ajustar el ancho del texto */
+            text-align: justify; /* Justificar el texto */
+        }
+
+        /* Gradiente de fondo */
+        #gradiente {
+            background: linear-gradient(to right, #e0f7fa, #333); /* Gradiente entre el color de inicio y el tono oscuro */
+            width: 100%; /* Ancho completo */
+            height: 100vh; /* Altura completa de la página */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <div class="navbar">
+        <a href="index.html" class="nav-link">Volver a Categorías</a>
+        <div class="nav-container">
+            <a href="#expresiones-faciales" class="nav-link">Expresiones Faciales</a>
+        </div>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Buscar...">
+        </div>
+    </div>
+
+    <!-- Contenedor con scroll horizontal -->
+    <div class="horizontal-scroll">
+        <!-- Sección de Expresiones Faciales -->
+        <section id="expresiones-faciales">
+            <h2>Expresiones Faciales</h2>
+            <a href="#anatomia-humana" class="category-link">Anatomía Humana</a>
+            <div class="category-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Nulla convallis libero sit amet felis eleifend, ac suscipit dui accumsan.</p>
+            </div>
+            <a href="#expresiones-faciales" class="category-link">Expresiones Faciales</a>
+            <div class="category-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Nulla convallis libero sit amet felis eleifend, ac suscipit dui accumsan.</p>
+            </div>
+        </section>
+
+        <!-- Sección de Gradiente -->
+        <section id="gradiente"></section>
+    </div>
+
+</body>
+</html>
