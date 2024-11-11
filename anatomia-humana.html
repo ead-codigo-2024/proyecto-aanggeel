@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anatomía Humana</title>
     <style>
-        /* Estilos generales */
         * {
             margin: 0;
             padding: 0;
@@ -17,22 +16,26 @@
             overflow-x: auto;
             overflow-y: hidden;
             height: 100vh;
-            background-color: #0982B7; /* Fondo azul */
+            background-color: #0982B7;
             color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
 
-        /* Estilos para el enlace de Volver a Categorías */
+        /* Enlace Volver a Categorías */
         .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
             display: flex;
             align-items: center;
             color: white;
             font-size: 18px;
             text-decoration: none;
-            margin: 10px 0;
-            padding-left: 20px;
         }
 
-        /* Estilo para la flecha dentro de un círculo */
         .back-link .arrow-circle {
             display: flex;
             justify-content: center;
@@ -43,42 +46,94 @@
             background-color: white;
             color: #0982B7;
             font-size: 18px;
-            margin-right: 15px;
+            margin-right: 10px;
         }
 
-        /* Sección de Anatomía Humana */
-        #anatomia-humana { 
-            background-color: #0982B7; /* Fondo azul */
+        /* Contenedor principal */
+        .container {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 40px;
-            width: 100%;
+            align-items: center;
+            width: 100vw;
+            max-width: 1200px;
+            padding-top: 50px;
         }
 
-        /* Título de Anatomía Humana */
-        #anatomia-humana h2 {
-            font-size: 40px;
-            font-weight: bold;
-            margin-top: 200px; /* Ajusta el título hacia la mitad de la página */
+        /* Título principal */
+        h1 {
+            font-size: 48px;
             margin-bottom: 20px;
         }
 
-        /* Añadir estilo al texto debajo de los enlaces */
-        .category-description {
-            font-size: 16px;
-            color: white;
-            margin-top: 10px;
+        /* Texto introductorio */
+        .intro-text {
+            font-size: 20px;
             max-width: 70%;
-            text-align: justify;
+            text-align: center;
+            margin-bottom: 40px;
         }
-        
+
+        /* Contenedor horizontal de botones */
+        .button-container {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 20px;
+            padding-bottom: 20px;
+            padding-left: 300px; /* Ajusta el espaciado en el borde izquierdo */
+            padding-right: 10px; 
+        }
+
+        /* Botones con previsualización */
+        .section {
+            width: 200px;
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            background-color: #1A72A6;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        .section:hover {
+            background-color: #125a82;
+        }
+
+        .section img {
+            width: 80%;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .section h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Previsualización de contenido */
+        .preview {
+            font-size: 14px;
+            display: none;
+            color: #FFD700;
+            margin-top: 10px;
+        }
+
+        /* Mostrar previsualización al hacer hover */
+        .section:hover .preview {
+            display: block;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Enlace de Volver a Categorías -->
+    <!-- Enlace Volver a Categorías -->
     <a href="index.html#categorias" class="back-link">
         <div class="arrow-circle">
             &#8592;
@@ -86,16 +141,66 @@
         Volver a Categorías
     </a>
 
-    <!-- Contenedor con scroll horizontal -->
-    <div class="horizontal-scroll">
-        <!-- Sección de Anatomía Humana -->
-        <section id="anatomia-humana">
-            <h2>Anatomía Humana</h2>
-            <div class="category-description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Nulla convallis libero sit amet felis eleifend, ac suscipit dui accumsan.</p>
+    <div class="container">
+        <!-- Título principal -->
+        <h1>Anatomía Humana</h1>
+        <div class="intro-text">
+            Explora las diferentes partes del cuerpo humano en esta guía interactiva.
+        </div>
+
+        <!-- Contenedor de botones con previsualización -->
+        <div class="button-container">
+            <div class="section">
+                <img src="shrink.jpg" alt="Shrink">
+                <h3>Shrink</h3>
+                <div class="preview">Dibuja las siluetas que quieras en la posición que quieras.</div>
             </div>
-        </section>
+            <div class="section">
+                <img src="outline.jpg" alt="Outline">
+                <h3>Outline</h3>
+                <div class="preview">Dibuja las siluetas que quieras en la posición que quieras.</div>
+            </div>
+            <div class="section">
+                <img src="interior-contour.jpg" alt="Interior Contour">
+                <h3>Interior Contour</h3>
+                <div class="preview">Información básica sobre el contorno de una figura y como descifrarlo.</div>
+            </div>
+            <div class="section">
+                <img src="join-together.jpg" alt="Join Together">
+                <h3>Join Together</h3>
+                <div class="preview">Exploración de la union entre partes.</div>
+            </div>
+            <div class="section">
+                <img src="structure.jpg" alt="Structure">
+                <h3>Structure</h3>
+                <div class="preview">Secciones principales del cuerpo humano.</div>
+            </div>
+            <div class="section">
+                <img src="measure.jpg" alt="Measure">
+                <h3>Measure</h3>
+                <div class="preview">Diametros y proporciones necesarias.</div>
+            </div>
+            <div class="section">
+                <img src="fill-in.jpg" alt="Fill In">
+                <h3>Fill In</h3>
+                <div class="preview">¿Donde cabe mi personaje?.</div>
+            </div>
+            <div class="section">
+                <img src="bend-and-stretch.jpg" alt="Bend and Stretch">
+                <h3>Bend and Stretch</h3>
+                <div class="preview">Dale flexibilidad a tus creaciones.</div>
+            </div>
+            <div class="section">
+                <img src="curves.jpg" alt="Curves">
+                <h3>Curves</h3>
+                <div class="preview">Otorga siluetas y formas curvilineas.</div>
+            </div>
+            <div class="section">
+                <img src="bandage.jpg" alt="Bandage">
+                <h3>Bandage</h3>
+                <div class="preview">Mantén ojo en las dimensiones, aqui te enseñamos cómo.</div>
+            </div>
+        </div>
     </div>
 
 </body>

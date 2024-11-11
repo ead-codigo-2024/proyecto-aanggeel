@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expresiones Faciales</title>
+    <title>Anatomía Humana</title>
     <style>
-        /* Estilos generales */
         * {
             margin: 0;
             padding: 0;
@@ -14,25 +13,28 @@
 
         body {
             font-family: Arial, sans-serif;
-            overflow-x: auto;
-            overflow-y: hidden;
             height: 100vh;
-            background-color: #333;
-            color: white;
+            background-color: #ffffff;
+            color: #0982B7;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: row; /* Para tener las dos secciones lado a lado */
+            overflow: hidden; /* Se elimina el scroll tanto horizontal como vertical */
         }
 
-        /* Estilos para el enlace de Volver a Categorías */
+        /* Enlace Volver a Categorías */
         .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
             display: flex;
             align-items: center;
-            color: white;
+            color: #0982B7;
             font-size: 18px;
             text-decoration: none;
-            margin: 10px 0;
-            padding-left: 20px;
         }
 
-        /* Estilo para la flecha dentro de un círculo */
         .back-link .arrow-circle {
             display: flex;
             justify-content: center;
@@ -41,44 +43,130 @@
             height: 30px;
             border-radius: 50%;
             background-color: white;
-            color: #333;
+            color: #0982B7;
             font-size: 18px;
-            margin-right: 15px;
+            margin-right: 10px;
         }
 
-        /* Sección de Expresiones Faciales */
-        #expresiones-faciales { 
-            background-color: #333;
+        /* Contenedor de imagen a la izquierda */
+        .image-container {
+            flex-shrink: 0;
+            height: 100vh; /* Ajusta la altura al 100% de la ventana */
+            width: 50vw; /* La imagen ocupa la mitad del ancho */
+            overflow: hidden;
+        }
+
+        .image-container img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        /* Contenedor de texto a la derecha */
+        .text-container {
+            width: 50vw;
+            padding: 20px;
             display: flex;
             flex-direction: column;
+            justify-content: flex-start;
             align-items: flex-start;
-            justify-content: center;
-            padding: 40px;
-            width: 100%;
         }
 
-        /* Título de Expresiones Faciales */
-        #expresiones-faciales h2 {
-            font-size: 40px;
-            font-weight: bold;
-            margin-top: 200px; /* Desplaza el título hacia la mitad de la página */
-            margin-bottom: 20px;
+        h1 {
+            font-size: 48px; /* Título reducido */
+            margin-bottom: 10px;
+            text-align: left;
         }
 
-        /* Añadir estilo al texto debajo de los enlaces */
-        .category-description {
+        .intro-text {
+            font-size: 18px; /* Texto reducido */
+            max-width: 70%;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        /* Contenedor para el único botón y su desplazamiento */
+        .horizontal-scroll-container {
+            position: absolute;
+            top: 180px; /* Baja un poco los botones */
+            right: 0;
+            width: 50vw; /* Ocupa el 50% del ancho a la derecha */
+            height: 100vh; /* Ajusta la altura al 100% de la ventana */
+            overflow-x: auto; /* Habilita el scroll horizontal */
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        /* Contenedor de los botones */
+        .horizontal-scroll {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 20px;
+            padding-top: 20px; /* Baja un poco el botón */
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        /* El único botón con tamaño ajustado */
+        .section {
+            width: 1600px; /* Longitud equivalente a 8 secciones */
+            height: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            background-color: #333;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        .section:hover {
+            background-color: #125a82;
+        }
+
+        .section img {
+            width: 80%;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        /* Caja de texto para contener el título */
+        .section .text-box {
+            width: 80%;
+            height: 150px;
+            overflow-y: auto;
+            text-align: left;
             font-size: 16px;
             color: white;
-            margin-top: 10px;
-            max-width: 70%;
-            text-align: justify;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+            border-radius: 10px;
+            padding: 10px;
+            box-sizing: border-box;
         }
-        
+
+        /* Previsualización de contenido */
+        .preview {
+            font-size: 14px;
+            display: none;
+            color: #FFD700;
+            margin-top: 10px;
+        }
+
+        /* Mostrar previsualización al hacer hover */
+        .section:hover .preview {
+            display: block;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Enlace de Volver a Categorías -->
+    <!-- Enlace Volver a Categorías -->
     <a href="index.html#categorias" class="back-link">
         <div class="arrow-circle">
             &#8592;
@@ -86,16 +174,39 @@
         Volver a Categorías
     </a>
 
-    <!-- Contenedor con scroll horizontal -->
-    <div class="horizontal-scroll">
-        <!-- Sección de Expresiones Faciales -->
-        <section id="expresiones-faciales">
-            <h2>Expresiones Faciales</h2>
-            <div class="category-description">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <p>Nulla convallis libero sit amet felis eleifend, ac suscipit dui accumsan.</p>
+    <!-- Contenedor principal para imagen y texto -->
+    <div class="image-container">
+        <img src="expresiones-faciales2.png" alt="Expresiones Faciales">
+    </div>
+
+    <div class="text-container">
+        <h1>Expresiones Faciales</h1>
+        <div class="intro-text">
+            Aprende a comunicar aspectos, emociones, pensamientos a través de la mirada y el gesto.
+        </div>
+    </div>
+
+    <!-- Contenedor para las secciones -->
+    <div class="horizontal-scroll-container">
+        <div class="horizontal-scroll">
+            <div class="section">
+                <div class="text-box">
+                    Cada rostro es diferente y cambia de expresión con 
+                    estados de ánimo, temperamentos y emociones. Expresiones faciales 
+                    envían señales que podemos leer e interpretar.  
+                    Podemos diferenciar fácilmente lo emocionalmente  
+                    Rostro movido de la máscara fija e inanimada.  
+                    El rostro dibujado se interpreta como una persona. El 
+                    arco de una ceja, el ancho de la línea de los labios, un 
+                    Arruga repentina en la frente: estos son matices 
+                    que le dan carácter a la cara. Los matices sutiles deciden 
+                    si una risa es cordial o sardónica. Podría fácilmente 
+                    convertirse en una sonrisa. Es más la interacción orgánica.  
+                    de todas las partes que lo hacen exitoso que el  
+                    interpretación correcta de cada parte.
+                </div>
             </div>
-        </section>
+        </div>
     </div>
 
 </body>
