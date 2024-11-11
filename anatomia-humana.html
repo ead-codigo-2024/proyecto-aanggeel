@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomía Humana</title>
+    <style>
+        /* Estilos generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            overflow-x: auto;
+            overflow-y: hidden;
+            height: 100vh;
+            background-color: #0982B7; /* Fondo azul */
+            color: white;
+        }
+
+        /* Estilos para el enlace de Volver a Categorías */
+        .back-link {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        /* Estilo para la flecha dentro de un círculo */
+        .back-link .arrow-circle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: white;
+            color: #0982B7;
+            font-size: 18px;
+            margin-right: 15px;
+        }
+
+        /* Sección de Anatomía Humana */
+        #anatomia-humana { 
+            background-color: #0982B7; /* Fondo azul */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 40px;
+            width: 100%;
+        }
+
+        /* Título de Anatomía Humana */
+        #anatomia-humana h2 {
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 200px; /* Ajusta el título hacia la mitad de la página */
+            margin-bottom: 20px;
+        }
+
+        /* Añadir estilo al texto debajo de los enlaces */
+        .category-description {
+            font-size: 16px;
+            color: white;
+            margin-top: 10px;
+            max-width: 70%;
+            text-align: justify;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- Enlace de Volver a Categorías -->
+    <a href="index.html#categorias" class="back-link">
+        <div class="arrow-circle">
+            &#8592;
+        </div>
+        Volver a Categorías
+    </a>
+
+    <!-- Contenedor con scroll horizontal -->
+    <div class="horizontal-scroll">
+        <!-- Sección de Anatomía Humana -->
+        <section id="anatomia-humana">
+            <h2>Anatomía Humana</h2>
+            <div class="category-description">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Nulla convallis libero sit amet felis eleifend, ac suscipit dui accumsan.</p>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
