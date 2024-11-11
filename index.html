@@ -358,7 +358,38 @@
     line-height: 1.5;
 }
 
-        #definiciones { background-color: #0982B7; color: #333; }
+        #definiciones {background-color: #0982B7;
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+} 
+
+#definiciones h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#definiciones p {
+    max-width: 600px;
+    font-size: 18px;
+}
+
+/* Enlace que cubre toda la sección */
+.definiciones-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none; /* Quita el subrayado */
+    color: white; /* Asegura que el texto sea blanco */
+    position: absolute; /* Asegura que el enlace cubra toda la sección */
+    top: 0;
+    left: 0;
+}
     </style>
 </head>
 <body>
@@ -455,9 +486,13 @@
         
 
         <section id="definiciones">
+            <a href="definiciones.html" class="definiciones-link"></a>
             <h2>Definiciones</h2>
             <p>Esta sección contiene las definiciones clave que te ayudarán a comprender los términos utilizados en el contexto del dibujo de figuras.</p>
         </section>
+    
+            
+             
 
    
     <script>
