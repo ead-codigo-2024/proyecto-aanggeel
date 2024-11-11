@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figure Drawing Methods for Artists</title>
     <style>
-        /* Estilos generales */
+      
         * {
             margin: 0;
             padding: 0;
@@ -14,12 +14,12 @@
 
         body {
             font-family: Arial, sans-serif;
-            overflow-x: auto;  /* Habilitar desplazamiento horizontal */
-            overflow-y: hidden;  /* Deshabilitar desplazamiento vertical */
-            height: 100vh; /* La altura se ajusta al tamaño de la ventana */
+            overflow-x: auto;  
+            overflow-y: hidden;  
+            height: 100vh; 
         }
 
-        /* Barra de navegación */
+
         .navbar {
             position: fixed;
             top: 0;
@@ -63,21 +63,21 @@
         }
 
 
-        /* Contenedor principal que usa flex para el scroll horizontal */
+       
         .horizontal-scroll {
             display: flex;
-            min-width: 600vw; /* Ajustado para asegurar que las secciones excedan el ancho de la ventana */
+            min-width: 600vw; /
             height: 100vh;
             position: relative;
-            overflow-x: auto; /* Permitir el scroll horizontal */
-            scroll-snap-type: x mandatory; /* Ajuste de scroll suave entre secciones */
-            scrollbar-width: thin; /* Define el tamaño de la barra de scroll */
-            scrollbar-color: #0982B7 #f1f1f1; /* Color de la barra y el fondo */
+            overflow-x: auto; 
+            scroll-snap-type: x mandatory; 
+            scrollbar-width: thin; 
+            scrollbar-color: #0982B7 #f1f1f1; 
         }
 
-        /* Estilos del contenedor de scroll horizontal */
+      
         .horizontal-scroll::-webkit-scrollbar {
-            height: 10px; /* Altura de la barra de desplazamiento horizontal */
+            height: 10px; 
         }
 
         .horizontal-scroll::-webkit-scrollbar-thumb {
@@ -89,9 +89,9 @@
             background-color: #f1f1f1;
         }
 
-        /* Secciones del contenido */
+        
         section {
-            min-width: 100vw;  /* Asegura que cada sección tenga el ancho de la ventana */
+            min-width: 100vw;  
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -101,10 +101,10 @@
             position: relative;
             padding: 40px;
             box-sizing: border-box;
-            scroll-snap-align: start; /* Alinear la sección al inicio del scroll */
+            scroll-snap-align: start; 
         }
 
-        /* Colores de fondo de las secciones */
+       
         #inicio { 
             background-color: #e0f7fa; 
             color: #333; 
@@ -116,14 +116,14 @@
             font-size: 18px;
         }
 
-        /* Caja de texto */
+      
         .text-box {
-            max-width: 50vw; /* Ocupa la mitad de la pantalla */
+            max-width: 50vw; 
         }
 
-        /* Título con estilo */
+
         .highlighted-title {
-            font-size: 36px; /* Tamaño más grande */
+            font-size: 36px; 
             font-weight: bold;
             color: #333;
         }
@@ -142,8 +142,8 @@
 }
 
 .book-image {
-    width: 200px; /* Ajusta el ancho de la imagen */
-    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    width: 200px; 
+    margin-right: 20px; 
 }
 
 .book-description {
@@ -151,16 +151,16 @@
 }
 
 
-/* Nueva sección de Gradiente entre Sobre el Libro y Definiciones */
+
 #gradiente-transicion {
-    width: 100vw%;
-    height: 100vh; /* Altura de la sección de transición */
-    background: linear-gradient(to right, #dcdcdc, #0982B7); /* Gradiente de blanco al azul */
+    width: 100vw;
+    height: 100vh; 
+    background: linear-gradient(to right, #dcdcdc, #0982B7); 
 }
 
-/* Estilos para la sección de Definiciones */
+
 #definiciones {
-    background-color: #0982B7; /* Azul usado previamente */
+    background-color: #0982B7; 
     color: white;
     padding: 40px;
     display: flex;
@@ -185,19 +185,19 @@
 }
 
 .book-image {
-    width: 300px; /* Ajusta el ancho de la imagen */
-    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    width: 300px; 
+    margin-right: 20px; 
 }
 
 .book-description {
     max-width: 600px;
 }
         .highlighted-title .blue {
-            color: #0982B7; /* Color azul */
+            color: #0982B7; 
         }
 
-        /* Colores de otras secciones */
-       /* Estilo para las categorías */
+    
+
 #categorias {
     background-color: #333;
     color: white;
@@ -227,7 +227,7 @@
     color: #333;
 }
 
-/* Estilo de los enlaces */
+
 .category-link {
     display: flex;
     text-decoration: none;
@@ -249,7 +249,7 @@
     object-fit: cover;
 }
 
-/* Estilo del texto */
+
 .category-text {
     padding: 20px;
     flex: 1;
@@ -267,12 +267,12 @@
     margin: 0;
 }
 
-/* Desvanecer el texto al posicionarse en el rectángulo */
+
 .category-item:hover .category-text h3 {
     opacity: 0;
 }
 
-/* Descripción de las categorías */
+
 .category-description {
     padding: 15px;
     font-size: 16px;
@@ -287,15 +287,14 @@
 }
 
 
-        /* Gradiente de fondo */
         #gradiente {
             background: linear-gradient(to right, #e0f7fa, #333); /* Gradiente entre el color de inicio y el tono oscuro */
-            width: 100%; /* Ancho completo */
-            height: 100vh; /* Altura completa de la página */
+            width: 100%; 
+            height: 100vh; 
         }
         .imagen-gradiente {
-    height: auto; /* Ocupa la altura completa de la sección */
-    width: 100%; /* Mantiene la relación de aspecto */
+    height: auto; 
+    width: 100%; 
     position: absolute;
     left: 0;
     bottom: 0;
@@ -307,7 +306,7 @@
 </head>
 <body>
 
-    <!-- Barra de navegación -->
+
     <div class="navbar">
         <a href="#inicio" class="nav-link">Inicio</a>
         <div class="nav-container">
@@ -320,9 +319,9 @@
         </div>
     </div>
 
-    <!-- Contenedor con scroll horizontal -->
     <div class="horizontal-scroll">
-        <!-- Sección de Inicio -->
+
+
         <section id="inicio">
             <div class="text-box">
                 <h1 class="highlighted-title">
@@ -333,16 +332,15 @@
             </div>
         </section>
 
-        <!-- Sección de Gradiente -->
         <section id="gradiente"> 
             <img src="gradiente 1.png" alt="gradiente imagen" class="imagen-gradiente">
         </section></section>
 
-        <!-- Sección de Categorías -->
+
         <section id="categorias">
             <h2>Categorías</h2>
             <div class="category-container">
-                <!-- Anatomía Humana -->
+
                 <div class="category-item">
                     <a href="anatomia-humana.html" class="category-link">
                         <div class="category-preview">
@@ -358,7 +356,7 @@
                     </div>
                 </div>
         
-                <!-- Expresiones Faciales -->
+
                 <div class="category-item">
                     <a href="expresiones-faciales.html" class="category-link">
                         <div class="category-preview">
@@ -376,7 +374,7 @@
             </div>
         </section>
         
-        <!-- Otras secciones -->
+
         <section id="sobre-el-libro">
             <div class="book-content">
                 <img src="portada-libro.png" alt="Portada del libro Figure Drawing Methods for Artists" class="book-image">
@@ -387,27 +385,17 @@
             </div>
         </section>
 
-        <section id="autores">
-            <div class="book-content">
-                <img src="img-autores.png" alt="Imagen de los autores" class="book-image">
-                <div class="book-description">
-                    <h2>Autores</h2>
-                    <p>Los autores de "Figure Drawing Methods for Artists" son expertos en el campo del dibujo artístico y la anatomía humana. Con años de experiencia en la enseñanza y la creación de contenido didáctico, han desarrollado este libro para ofrecer a los artistas de todos los niveles una comprensión clara y accesible de los métodos de dibujo de figuras.</p>
-                </div>
-            </div>
-        </section>
         
-        
-        <!-- Sección de Gradiente entre "Sobre el libro" y "Definiciones" -->
+  
         <section id="gradiente-transicion"></section>
         
-        <!-- Sección de Definiciones -->
+
         <section id="definiciones">
             <h2>Definiciones</h2>
             <p>Esta sección contiene las definiciones clave que te ayudarán a comprender los términos utilizados en el contexto del dibujo de figuras.</p>
         </section>
 
-    <!-- JavaScript para transformar el scroll vertical en desplazamiento horizontal -->
+   
     <script>
         const horizontalScrollContainer = document.querySelector('.horizontal-scroll');
 
@@ -416,7 +404,7 @@
             horizontalScrollContainer.scrollLeft += e.deltaY;
         });
 
-        // Agregar clase activa en los enlaces de navegación
+  
         const links = document.querySelectorAll('.nav-link');
         const sections = document.querySelectorAll('section');
 
